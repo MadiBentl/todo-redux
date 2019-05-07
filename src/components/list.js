@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 
 class List extends Component {
   render() {
+    console.log(this.props);
     return (
       <div>
         <h3>List</h3>
