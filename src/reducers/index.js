@@ -10,6 +10,7 @@ const listReducer = (list = null, action) => {
     return [...list, action.payload];
   }
   else if (action.type == "COMPLETE_TODO"){
+    console.log("called from reducer");
     return list.filter(todo => todo != action.payload);
   }
   else{
