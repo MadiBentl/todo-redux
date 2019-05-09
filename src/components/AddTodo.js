@@ -3,11 +3,15 @@ import {connect} from 'react-redux';
 import {addTodo} from '../actions';
 
 class AddTodo extends React.Component {
+
   render(){
+    let handleSubmit = () =>{
+      this.props.addTodo({task:"Bake Carrot Muffins", status: "Incomplete" })
+    }
     return(
-      <div class="ui action input">
+      <div className="ui action input">
         <input type="text" placeholder="Search..." />
-        <div class="ui button" onClick={() => this.props.addTodo({task:"Bake Carrot Muffins", status: "Incomplete" })}>Search</div>
+        <div className="ui button" onClick={() => handleSubmit()}>Search</div>
       </div>
     );
   }
