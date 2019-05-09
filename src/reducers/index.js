@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux';
 
 const defaultState = [
-  {task: "Clean Kitchen", status: "Incomplete"},
-  {task: "Water Plants", status: "Incomplete"}
+  {task: "Clean Kitchen", id: 0, status: "Incomplete"},
+  {task: "Water Plants", id: 1, status: "Incomplete"}
 ];
 
 const listReducer = (list = null, action) => {
@@ -19,5 +19,4 @@ const listReducer = (list = null, action) => {
     return defaultState;
   }
 }
-
 export default combineReducers({list:listReducer});

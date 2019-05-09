@@ -5,7 +5,8 @@ import {addTodo} from '../actions';
 class AddTodo extends React.Component {
 
   render(){
-    let handleSubmit = () =>{
+    let handleSubmit = (e) =>{
+      e.preventDefault();
       this.props.addTodo({
         task:this.refs.todoField.value,
         status: "Incomplete"
@@ -14,8 +15,10 @@ class AddTodo extends React.Component {
 
     return(
       <div className="ui action input">
-        <input type="text" placeholder="Search..." ref="todoField"/>
-        <div className="ui button" onClick={() => handleSubmit()}>Search</div>
+      <form onSubmit={(e) => handleSubmit(e)}>
+        <input type="text" placeholder="Search..." id="todoField" ref="todoField"/>
+        <div className="ui button">Search</div>
+        </form>
       </div>
     );
   }

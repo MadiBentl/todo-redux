@@ -1,9 +1,10 @@
 import React from 'react';
 
+let nextId = 3;
 export const addTodo = (task) => {
   return {
     type: "ADD_TODO",
-    payload: task
+    payload: {...task, id:nextId++}
   }
 }
 

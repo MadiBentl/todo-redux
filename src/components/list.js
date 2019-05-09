@@ -14,6 +14,7 @@ class List extends Component {
             <input
               type="checkbox"
               name={item.task}
+              id = {item.id}
               onClick={()=>this.props.completeTodo(item)}/>
             <label>{item.task}</label>
           </div>
