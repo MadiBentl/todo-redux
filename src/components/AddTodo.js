@@ -6,11 +6,15 @@ class AddTodo extends React.Component {
 
   render(){
     let handleSubmit = () =>{
-      this.props.addTodo({task:"Bake Carrot Muffins", status: "Incomplete" })
+      this.props.addTodo({
+        task:this.refs.todoField.value,
+        status: "Incomplete"
+      })
     }
+
     return(
       <div className="ui action input">
-        <input type="text" placeholder="Search..." />
+        <input type="text" placeholder="Search..." ref="todoField"/>
         <div className="ui button" onClick={() => handleSubmit()}>Search</div>
       </div>
     );
