@@ -6,6 +6,7 @@ class List extends Component {
   render() {
     const items = [];
     const itemsNotDone = [];
+
     this.props.list.forEach(item =>{
       items.push(
         <div className="field" key={item.task}>
