@@ -14,11 +14,13 @@ class AddTodo extends React.Component {
     }
 
     return(
-      <div className="ui action input">
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <input type="text" placeholder="Search..." id="todoField" ref="todoField"/>
-        <div className="ui button">Search</div>
-        </form>
+      <div className="column">
+        <div className="ui action input">
+        <form onSubmit={(e) => handleSubmit(e)}>
+          <input type="text" placeholder="Search..." id="todoField" ref="todoField"/>
+          <div className="ui button">Search</div>
+          </form>
+        </div>
       </div>
     );
   }

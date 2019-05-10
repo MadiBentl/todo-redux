@@ -4,9 +4,11 @@ import AddTodo from './AddTodo';
 
 function App() {
   return (
-    <div className = "App" >
-      <List / >
-      <AddTodo />
+    <div className = "App ui three column centered grid" >
+      <div className="column">
+        <List / >
+        <AddTodo />
+      </div>
     </div>
   );
 }
