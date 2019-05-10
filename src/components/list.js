@@ -31,9 +31,8 @@ class List extends Component {
           <h3>List</h3>
           {items}
         </div>
-        <p>Total Items: {items.length}</p>
-        <p>Items To Do: {itemsNotDone.length} </p>
-        <p>Items Finished: {items.length - itemsNotDone.length}</p>
+        <p>Items To Do: {itemsNotDone.length}/{items.length}</p>
+        <p>Items Finished: {items.length - itemsNotDone.length}/{items.length}</p>
       </div>
     );
   }
