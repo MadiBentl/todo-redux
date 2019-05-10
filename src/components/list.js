@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {completeTodo} from '../actions';
+import Item from './Item';
 
 class List extends Component {
   render() {
